@@ -25,5 +25,6 @@ for n = 2:10
     T(n, 13) = t_test(T(1, 1:10), T(n, 1:10))
 end
 
-T = array2table(T, "VariableNames", ["Student 1", "Student 2", "Student 3", "Student 4", "Student 5", "Student 6", "Student 7", "Student 8", "Student 9", "Student 10", "Avg", "Stdev", "|t|"])
-writetable(T, "Lab_Report_1A_Data.xlsx")
+T = array2table(T, "VariableNames", ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Avg", "Stdev", "|t|"])
+writetable(T(x, ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]), "Datasets.xlsx")
+writetable(T(x, ["Avg", "Stdev", "|t|"]), "Calculations.xlsx")
